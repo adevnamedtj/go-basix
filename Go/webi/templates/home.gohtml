@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table style="width:100%">
+  <tr>
+  <th>No.</th>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+ 
+  {{range $Index, $Person := .}}
+   <tr>
+  <td>{{INC $Index 1}}</td>
+    <td>{{$Person.FirstName}}</td>
+    <td>{{UC $Person.LastName}}</td> 
+    <td>{{$Person.Age}}</td>
+  </tr>
+{{end}}
+</table>
+
+</body>
+</html>
